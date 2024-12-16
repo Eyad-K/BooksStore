@@ -1,0 +1,115 @@
+<!-- صفحة الكتب Books.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الكتب - المكتبة</title>
+    <link rel="stylesheet" href="Style.css">
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            details.style.display = details.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>قائمة الكتب</h1>
+    </header>
+    <main>
+        <form action="reservation\reservation.html" method="get">
+            <table>
+                <thead>
+                    <tr>
+                        <th>رمز الكتاب</th>
+                        <th>العنوان</th>
+                        <th>السعر</th>
+                        <th>إظهار التفاصيل</th>
+                        <th>اختيار</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1234</td>
+                        <td onmouseover="this.style.backgroundImage='url(images\books\1.jpg)';" 
+                            onmouseout="this.style.backgroundImage='none';">الرقابة الإحصائية للجودة بإستخدام البرمجيات الجازة Statistical Quality Control ( SQC ) ( Minitab - SPSS - EXCEL )</td>
+                        <td>29.75$</td>
+                        <td><button type="button" onclick="toggleDetails('details1')">عرض</button></td>
+                        <td><input type="radio" name="book" value="الرقابة الإحصائية للجودة بإستخدام البرمجيات الجازة Statistical Quality Control ( SQC ) ( Minitab - SPSS - EXCEL )"></td>
+                    </tr>
+                    <tr id="details1" style="display: none;">
+                        <td colspan="5">
+                            <iframe src="https://www.neelwafurat.com/itempage.aspx?id=lbb408412-407576&search=books" width="350%" height="200"></iframe>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>5678</td>
+                        <td onmouseover="this.style.backgroundImage='url(images\books\2.jpg)';" 
+                            onmouseout="this.style.backgroundImage='none';">أساسيات وتكنولوجيا شبكات الحاسوب</td>
+                        <td>47.50$</td>
+                        <td><button type="button" onclick="toggleDetails('details2')">عرض</button></td>
+                        <td><input type="radio" name="book" value="أساسيات وتكنولوجيا شبكات الحاسوب"></td>
+                    </tr>
+                    <tr id="details2" style="display: none;">
+                        <td colspan="5">
+                            <iframe src="https://www.neelwafurat.com/itempage.aspx?id=lbb217645-191814&search=books" width="350%" height="200"></iframe>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>9101</td>
+                        <td onmouseover="this.style.backgroundImage='url(images\books\3.jpg)';" 
+                            onmouseout="this.style.backgroundImage='none';">تصميم وتطبيق نظم قواعد البيانات العلاقية</td>
+                        <td>19.00$</td>
+                        <td><button type="button" onclick="toggleDetails('details3')">عرض</button></td>
+                        <td><input type="radio" name="book" value="تصميم وتطبيق نظم قواعد البيانات العلاقية"></td>
+                    </tr>
+                    <tr id="details3" style="display: none;">
+                        <td colspan="5">
+                            <iframe src="https://www.neelwafurat.com/itempage.aspx?id=sab36689-20036858&search=books" width="350%" height="200"></iframe>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>1121</td>
+                        <td onmouseover="this.style.backgroundImage='url(images\books\4.jpg)';" 
+                            onmouseout="this.style.backgroundImage='none';">تطوير تطبيقات الويب باستخدام اوراكل 9 اى</td>
+                        <td>19.00$</td>
+                        <td><button type="button" onclick="toggleDetails('details4')">عرض</button></td>
+                        <td><input type="radio" name="book" value="تطوير تطبيقات الويب باستخدام اوراكل 9 اى"></td>
+                    </tr>
+                    <tr id="details4" style="display: none;">
+                        <td colspan="5">
+                            <iframe src="https://www.neelwafurat.com/itempage.aspx?id=egb87942-5087909&search=books" width="350%" height="200"></iframe>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>3141</td>
+                        <td onmouseover="this.style.backgroundImage='url(images\books\5.jpg)';" 
+                            onmouseout="this.style.backgroundImage='none';">هندسة البرمجيات ؛ Software Engineering</td>
+                        <td>19.00$</td>
+                        <td><button type="button" onclick="toggleDetails('details5')">عرض</button></td>
+                        <td><input type="radio" name="book" value="هندسة البرمجيات ؛ Software Engineering"></td>
+                    </tr>
+                    <tr id="details5" style="display: none;">
+                        <td colspan="5">
+                            <iframe src="https://www.neelwafurat.com/itempage.aspx?id=lbb193278-162882&search=books" width="350%" height="200"></iframe>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit">متابعة</button>
+        </form>
+        <nav>
+            <a href="home.html">الرئيسية</a>
+            <a href="AboutUs.html">من نحن</a>
+        </nav>
+    </main>
+    <footer>
+        <p>&copy; 2024 المكتبة الإلكترونية</p>
+    </footer>
+</body>
+</html>

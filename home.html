@@ -1,0 +1,101 @@
+<!-- الصفحة الرئيسية home.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرئيسية - المكتبة</title>
+    <link rel="stylesheet" href="Style.css">
+    <script>
+        let currentIndex = 0;
+        function showNextImage() {
+            const images = document.querySelectorAll('.slideshow img');
+            images.forEach((img, index) => {
+                img.style.display = index === currentIndex ? 'block' : 'none';
+            });
+            currentIndex = (currentIndex + 1) % images.length;
+        }
+        window.onload = function() {
+            setInterval(showNextImage, 5000);
+            showNextImage();
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.neelwafurat.com/images/neelwafurat-logo.png" alt="المكتبة الإلكترونية">
+        </div>
+        <nav class="main-nav">
+            <a href="home.html">الرئيسية</a>
+            <a href="Books\Books.html">الكتب</a>
+            <a href="AboutUs\AboutUs.html">من نحن</a>
+            <a href="reservation\reservation.html">الحجز</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="welcome-banner">
+            <h1>أهلاً بكم في المكتبة الإلكترونية</h1>
+            <p>اكتشف أحدث الكتب بأفضل الأسعار</p>
+        </div>
+
+        <aside class="slideshow">
+            <img src="images/book1.jpg" alt="كتاب 1">
+            <img src="images/book2.jpg" alt="كتاب 2">
+            <img src="images/book3.jpg" alt="كتاب 3">
+            <img src="images/book4.jpg" alt="كتاب 4">
+            <img src="images/book5.jpg" alt="كتاب 5">
+            <img src="images/book6.jpg" alt="كتاب 6">
+            <img src="images/book7.jpg" alt="كتاب 7">
+            <img src="images/book8.jpg" alt="كتاب 8">
+            <img src="images/book9.jpg" alt="كتاب 9">
+            <img src="images/book10.jpg" alt="كتاب 10">
+        </aside>
+
+        <section class="featured-books">
+            <h2>الكتب المميزة</h2>
+            <div class="book-list">
+                <div class="book-item">
+                    <img src="images\books\1.jpg" alt="الرقابة الإحصائية للجودة بإستخدام البرمجيات الجازة Statistical Quality Control ( SQC ) ( Minitab - SPSS - EXCEL )">
+                    <p>كتاب البرمجة</p>
+                </div>
+                <div class="book-item">
+                    <img src="images\books\2.jpg" alt="أساسيات وتكنولوجيا شبكات الحاسوب">
+                    <p>أساسيات الشبكات</p>
+                </div>
+                <div class="book-item">
+                    <img src="images\books\3.jpg" alt="تصميم وتطبيق نظم قواعد البيانات العلاقية">
+                    <p>تصميم قواعد البيانات</p>
+                </div>
+                <div class="book-item">
+                    <img src="images\books\4.jpg" alt="تطوير تطبيقات الويب باستخدام اوراكل 9 اى">
+                    <p>تطوير تطبيقات الويب باستخدام اوراكل 9 اى</p>
+                </div>
+                <div class="book-item">
+                    <img src="images\books\5.jpg" alt="هندسة البرمجيات ؛ Software Engineering">
+                    <p>هندسة البرمجيات ؛ Software Engineering</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="student-info">
+            <h2>أسماء مجموعة الطلاب</h2>
+            <ul>
+                <li>محمد علي - Mohammed Ali - الرقم الجامعي: 123456</li>
+                <li>أحمد سعيد - Ahmed Saeed - الرقم الجامعي: 654321</li>
+                <li>فاطمة خالد - Fatima Khaled - الرقم الجامعي: 789012</li>
+            </ul>
+        </section>
+		
+        <section class="website-link">
+            <h2>رابط النشر على الإنترنت</h2>
+            <a href="https://www.neelwafurat.com/" target="_blank">زيارة الموقع</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 المكتبة الإلكترونية</p>
+    </footer>
+</body>
+</html>
